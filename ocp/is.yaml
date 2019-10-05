@@ -1,0 +1,10 @@
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: "kbit-integration-tests"
+spec:
+  tags:
+  - from:
+      kind: DockerImage
+      name: "docker-registry.default.svc:5000/kbit-devops/kbit-integration-tests"
+    name: "latest"

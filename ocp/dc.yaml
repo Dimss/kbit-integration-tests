@@ -1,0 +1,34 @@
+kind: DeploymentConfig
+apiVersion: "v1"
+metadata:
+  labels:
+    app: "kbit-integration-tests"
+  name: "kbit-integration-tests"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "kbit-integration-tests"
+    spec:
+      containers:
+      - name: "kbit-integration-tests"
+        image: " "
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        env:
+        - name: KBIT_API
+          value: "http://127.0.0.1:8080"
+        - name: K8S_IN_CLUSTER
+          value: "true"
+  triggers:
+    - type: "ConfigChange"
+    - type: "ImageChange"
+      imageChangeParams:
+        automatic: true
+        containerNames:
+          - "kbit-integration-tests"
+        from:
+          kind: "ImageStreamTag"
+          name: "kbit-integration-tests:latest"

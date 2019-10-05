@@ -1,0 +1,19 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "kbit-integration-tests"
+spec:
+  runPolicy: "Serial"
+  source:
+    git:
+      uri: "https://github.com/Dimss/kbit-integration-tests.git"
+  strategy:
+    sourceStrategy:
+      from:
+        kind: "ImageStreamTag"
+        name: "python:3.6"
+        namespace: openshift
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "kbit-integration-tests:latest"

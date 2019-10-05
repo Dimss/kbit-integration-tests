@@ -2,7 +2,7 @@ from kubernetes import client, config
 import conf
 import glob
 
-if conf.K8S_IN_CLUSTER:
+if conf.K8S_IN_CLUSTER == "true":
     print("Running in cluster, using in in-cluster-config")
     config.load_incluster_config()
 else:
