@@ -1,2 +1,2 @@
-cp /tmp/src/* ./
+cp -r /tmp/src/* ./
 pip install
