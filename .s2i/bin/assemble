@@ -1,2 +1,3 @@
 cp -r /tmp/src/* ./
+ls -all
 pip install
