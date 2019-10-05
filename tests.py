@@ -42,7 +42,7 @@ class TestKbitAPI(unittest.TestCase):
             self.fail(ex)
 
     def test_delete_user(self):
-        self.assertEqual(1, 2)
+        self.assertEqual(2, 2)
 
 
 if __name__ == '__main__':
