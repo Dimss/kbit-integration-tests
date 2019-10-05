@@ -1,0 +1,2 @@
+cp /tmp/src/* ./
+pip install
