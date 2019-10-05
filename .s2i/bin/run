@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+python tests.py
+python publish_test_reports.py
