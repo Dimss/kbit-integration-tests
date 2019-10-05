@@ -4,7 +4,7 @@ import HtmlTestRunner
 import conf
 
 
-class TestSendReceiveQueueMessages(unittest.TestCase):
+class TestKbitAPI(unittest.TestCase):
 
     def test_user_login(self):
         print("API URL: " + conf.KBIT_API_URL)
