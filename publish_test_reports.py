@@ -1,18 +1,16 @@
 from kubernetes import client, config
+import conf
 import glob
 
-config.load_kube_config()
+if conf.K8S_IN_CLUSTER:
+    print("Running in cluster, using in in-cluster-config")
+    config.load_incluster_config()
+else:
+    print("Running outside of the cluster, using in load-kube-config")
+    config.load_kube_config()
+
 namespace = "kbit-devops"
 cm_name = "kbit-test-reports"
-
-
-# def create_cm_with_report(cm_name, report_name, report_context, ):
-#     api_instance = client.CoreV1Api()
-#     body = client.V1ConfigMap()
-#     metadata = client.V1ObjectMeta(name=cm_name)
-#     body.metadata = metadata
-#     body.data = {report_name: report_context}
-#     api_instance.create_namespaced_config_map(namespace, body)
 
 
 def add_report_to_cm(reports):
