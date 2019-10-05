@@ -18,6 +18,7 @@ def add_report_to_cm(reports):
     api_instance = client.CoreV1Api()
     body = client.V1ConfigMap()
     cm = api_instance.read_namespaced_config_map(cm_name, namespace)
+    print(cm.data.keys())
     for report in reports:
         if cm.data is None:
             data[report['cm_key']] = report['content']
