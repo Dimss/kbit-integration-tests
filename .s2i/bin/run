@@ -1,6 +1,6 @@
 #!/usr/bin/bash
-sleep 3600
 echo "-----------> RUNNING test.py"
 python tests.py
 echo "-----------> RUNNING publish_test_reports.py"
 python publish_test_reports.py
+echo "-----------> Done "
