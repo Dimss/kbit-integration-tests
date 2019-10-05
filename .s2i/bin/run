@@ -1,3 +1,5 @@
 #!/usr/bin/bash
+echo "-----------> RUNNING test.py"
 python tests.py
+echo "-----------> RUNNING publish_test_reports.py"
 python publish_test_reports.py
