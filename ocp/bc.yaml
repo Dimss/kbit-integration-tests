@@ -18,4 +18,4 @@ spec:
       kind: "DockerImage"
       name: "docker.io/dimsss/kbit-integration-tests:0.1"
     pushSecret:
-      name: "kbit-integration-tests"
+      name: "dimssss-docker-io"
