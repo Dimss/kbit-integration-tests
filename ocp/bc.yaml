@@ -15,5 +15,7 @@ spec:
         namespace: openshift
   output:
     to:
-      kind: "ImageStreamTag"
-      name: "kbit-integration-tests:latest"
+      kind: "DockerImage"
+      name: "docker.io/dimsss/kbit-integration-tests:0.1"
+    pushSecret:
+      name: "kbit-integration-tests"
