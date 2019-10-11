@@ -16,6 +16,6 @@ spec:
   output:
     to:
       kind: "DockerImage"
-      name: "docker.io/dimsss/kbit-integration-tests:0.1"
+      name: "docker.io/dimssss/kbit-integration-tests:0.1"
     pushSecret:
       name: "dimssss-docker-io"
