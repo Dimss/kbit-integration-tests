@@ -9,7 +9,7 @@ else:
     print("Running outside of the cluster, using in load-kube-config")
     config.load_kube_config()
 
-namespace = "kbit-devops"
+namespace = conf.K8S_NS
 cm_name = "kbit-test-reports"
 
 

@@ -8,3 +8,4 @@ config.read("{current_dir}/{ini_file}".format(current_dir=os.path.dirname(__file
 
 KBIT_API_URL = config.get("app", "kbit_api_url")
 K8S_IN_CLUSTER = config.get("app", "in_cluster_config")
+K8S_NS = config.get("app", "ns")
